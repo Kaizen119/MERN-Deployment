@@ -7,7 +7,7 @@ const Pirate = require("../models/pirates.model")
 
 //READ ALL
 module.exports.findAllPirates = (requestObj,responseObj) => {
-    Pirate.find().sort({name:"ASC"},{name: "asc",})
+    Pirate.find().sort({name: "asc",})
         .then((allDaPirates) => {
             responseObj.json(allDaPirates)
         })
